@@ -5,7 +5,7 @@
 1. **Cloner le projet**
 
     ```bash
-    git clone <url-du-repo>
+    git clone https://github.com/SaoureT13/Kaybic-Africa-mobile-developer-project.git
     cd mobile
     ```
 
