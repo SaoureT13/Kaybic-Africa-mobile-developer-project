@@ -4,7 +4,6 @@ class TransactionDto {
   final String id;
   final String reference;
   final double amount;
-  final String currency;
   final String status;
   final String? fromOperator;
   final String? toOperator;
@@ -14,7 +13,6 @@ class TransactionDto {
     required this.id,
     required this.reference,
     required this.amount,
-    required this.currency,
     required this.status,
     this.fromOperator,
     this.toOperator,
@@ -27,7 +25,6 @@ class TransactionDto {
       id: json['id'] as String,
       reference: json['reference'] as String,
       amount: (json['amount'] as num).toDouble(),
-      currency: json['currency'] as String? ?? 'F',
       status: json['status'] as String,
       fromOperator: json['from_operator'] as String?,
       toOperator: json['to_operator'] as String?,
@@ -41,7 +38,6 @@ class TransactionDto {
       'id': id,
       'reference': reference,
       'amount': amount,
-      'currency': currency,
       'status': status,
       'from_operator': fromOperator,
       'to_operator': toOperator,
@@ -55,7 +51,6 @@ class TransactionDto {
       id: id,
       reference: reference,
       amount: amount,
-      currency: currency,
       status: _statusFromString(status),
       fromOperator: fromOperator,
       toOperator: toOperator,
@@ -69,7 +64,6 @@ class TransactionDto {
       id: transaction.id,
       reference: transaction.reference,
       amount: transaction.amount,
-      currency: transaction.currency,
       status: _statusToString(transaction.status),
       fromOperator: transaction.fromOperator,
       toOperator: transaction.toOperator,
